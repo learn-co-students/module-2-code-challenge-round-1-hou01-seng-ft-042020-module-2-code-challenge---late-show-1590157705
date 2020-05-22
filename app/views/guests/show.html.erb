@@ -1,0 +1,7 @@
+<h3>Guest Info</h3>
+<h5>Name:</h5>
+<%= @guest.name%>
+<h5>Appearances:</h5>
+<% @appearances_order.each do |a|%>
+    <li>Episode <%=a.episode.number%> - <%= link_to a.episode.date, episode_path(a.episode) %>, Rating: <%=a.rating%> </li>
+<%end%>
