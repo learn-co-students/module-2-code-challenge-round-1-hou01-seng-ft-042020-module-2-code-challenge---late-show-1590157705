@@ -1,0 +1,16 @@
+<h4>Episode Date: <%=@episode.date%></h4>
+<h4>Episode Number: <%=@episode.number%></h4>
+
+<p>
+Guests who appeared on this episode: 
+<br>
+<%@episode.guests.each do |guest|%>
+    <%=link_to guest.name, "/guests/#{guest.id}"%>
+    <br>
+<%end%>
+
+</p>
+
+
+
+
