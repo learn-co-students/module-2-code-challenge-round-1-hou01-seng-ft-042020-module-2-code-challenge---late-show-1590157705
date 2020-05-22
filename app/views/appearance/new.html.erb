@@ -1,0 +1,5 @@
+<%form_for @appearnce do |f|%>
+<%= f.collection_select :guest_ids, @guest, :id, :name %><br/>
+<%= f.collection_select :episode_ids, @episode, :id, :name %><br/>
+<%= f.submit%>
+<%end%>
