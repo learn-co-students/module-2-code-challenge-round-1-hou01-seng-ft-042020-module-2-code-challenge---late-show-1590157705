@@ -1,0 +1,7 @@
+<%= @guest.name %>
+<% @guest.sort_episodes_by_rating.each do |episode| %>
+  <li><%= @guest.get_appearance_rating(episode) %></li>
+  <li><%= link_to episode.date, episode_path(episode) %></li>
+<% end %> 
+
+
