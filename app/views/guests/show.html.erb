@@ -1,0 +1,13 @@
+<h1>Guest</h2>
+<br>
+<h3>Episode Dates</h3>
+<br>
+<% @guest.episodes.each do |episode| %>
+<li>
+<%= link_to episode.date.strftime("%B %d, %Y"), episode_path(episode) %>
+<%= episode.appearances.rating %>
+
+</li>
+<% end %>
+
+
