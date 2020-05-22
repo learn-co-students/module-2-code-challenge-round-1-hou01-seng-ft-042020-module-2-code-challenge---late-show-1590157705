@@ -1,0 +1,14 @@
+
+<ul>
+    
+    <%@guest.appearances.each do |x|%>
+    Episode Date
+    <li>
+    <%= link_to x.episode.date, episode_path(x.episode.id) %>
+    
+    </li>
+    Rating
+    <%= x.rating%>
+    
+    <%end%>
+</ul>
