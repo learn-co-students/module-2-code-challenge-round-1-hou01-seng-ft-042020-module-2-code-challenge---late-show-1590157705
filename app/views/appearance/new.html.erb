@@ -1,0 +1,11 @@
+<h3>New Form</h3>
+<%= form_for model: @appearance do |f| %>
+  <%= f.label "Rating" %>
+  <%= f.number_field :rating %>
+  <br> 
+  <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+  <br>
+  <%= f.collection_select :guest_id, Episode.all, :id, :name %>
+<br>
+  <%= f.submit %>
+  <% end %>
