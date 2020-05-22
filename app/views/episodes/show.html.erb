@@ -1,0 +1,15 @@
+<% #On the episode show page, a user should see:%>
+
+<% # - Episode date%>
+<% # - A list of the guests who were on that episode%>
+<% # - Each guest's name should link to the Guest Show page %>
+
+<h4> Episode Date: <%= @episode.date %> </h4>
+<h4> Guests: </h4>
+    <ul>
+        <% @guests.each do |guest| %>
+           <li> <%= link_to guest.name, "/guests/#{guest.id}" %> </li>
+        <% end %>
+    </ul>    
+
+
