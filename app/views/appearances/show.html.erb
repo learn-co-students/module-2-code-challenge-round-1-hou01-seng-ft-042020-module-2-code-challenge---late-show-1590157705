@@ -1,0 +1,7 @@
+<%= @appearance.guest.name %>
+<%= @appearance.episode.number %>
+<%= @appearance.episode.date %>
+
+<%=form_with model: @appearance, method: "delete" do |f|%>
+<%=f.submit value="destroy appearance" %>
+<%end%>
