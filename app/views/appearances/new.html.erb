@@ -1,0 +1,25 @@
+<% #A user can fill out a form to create a new Appearance. They can:
+
+# - Choose an existing guest from a select dropdown
+# - Choose an existing episode from a select dropdown
+# - Enter a numeric rating
+# - Submit the form
+
+# The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay).
+# - The validation error should be shown on the Appearance creation form 
+# when a user attempts to save an appearance with an invalid rating. %>
+<% flash.each do |e| %>
+    <%= e %>
+<% end %>
+
+<%= form_for @appearance do |f| %>
+
+<%= f.collection_select :guest_id, @guests, :id, :name %>
+
+<%= f.collection_select :episode_id, @episodes, :id, :date %>
+
+<%= f.label :appearance_rating %>
+<%= f.number_field :appearance_rating %>
+
+<%= f.submit %>
+<% end %>
