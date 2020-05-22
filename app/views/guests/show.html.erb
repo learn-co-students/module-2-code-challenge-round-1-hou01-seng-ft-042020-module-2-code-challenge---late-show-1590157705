@@ -1,0 +1,19 @@
+<h1>Guest Information:</h1>
+<p>
+<h2>Episodes:</h2>
+<%@guest.appearances.each do |appearance|%>
+<label>Episode Date:</label>
+<%=link_to appearance.episode.date, episode_path(appearance.episode)%>
+<br/>
+<label>Appearance Rating:</label>
+<%=appearance.rating%>
+<p>
+<%end %>
+
+Episodes by Appearance Rating:
+<br>
+<%@guest.order_by_rating.each do |appearance|%>
+<%=link_to appearance.episode.date, episode_path(appearance.episode)%> Rating: <%=appearance.rating%>
+<p>
+
+<%end %>

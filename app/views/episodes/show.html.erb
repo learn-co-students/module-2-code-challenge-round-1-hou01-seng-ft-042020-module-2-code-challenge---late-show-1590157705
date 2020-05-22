@@ -1,0 +1,11 @@
+<h1>EPISODE</h1>
+<p>
+Date: <%=@episode.date%>
+<p>
+Guests:
+<%@episode.guests.uniq.each do |guest|%>
+<%=link_to guest.name, guest_path(guest)%>
+<%end%>
+<p>
+Average Rating of Appearances:
+<%=@episode.average%>
