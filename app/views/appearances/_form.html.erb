@@ -1,0 +1,23 @@
+<% if flash[:errors]%>
+    <% flash[:errors].each do |e| %>
+        <li style="color: red">
+            <%= e %>
+        </li>
+    <%end%>
+<%end%>
+
+<%= form_with model: @appearance do |f|%>
+    <%= f.label "Guest"%>
+    <%= f.collection_select :guest_id, @guests, :id, :name%>
+    <br>
+    <br>
+    <%= f.label "Episode"%>
+    <%= f.collection_select :episode_id, @episodes.map{|e| ["Episdoe #{e.number} - #{e.date}", e.id]}, :second, :first %>
+    <br>
+    <br>
+    <%= f.label :rating %>
+    <%= f.number_field :rating%>
+    <br>
+    <br>
+    <%= f.submit%>
+<%end %>
