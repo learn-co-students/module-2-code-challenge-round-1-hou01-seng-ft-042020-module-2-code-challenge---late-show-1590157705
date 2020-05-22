@@ -1,0 +1,14 @@
+<h3>Episodes Appeared On:</h3>
+
+<%=@guest.episodes.each do |e|%>
+<%= link_to e.date, episode_path(e)%>
+<%end%>
+
+<%= @guest.appearances.each do |a|%>
+<%= a.rating%>
+<%end%>
+
+<h3>Appearance By Ratings:</h3>
+<% @guest.appearances.order('rating DESC').limit(5).each do |a|%>
+    <% a.rating%>
+<%end%>

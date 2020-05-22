@@ -1,0 +1,11 @@
+<h3>Date Of Episode</h3>
+<%=@episode.date%>
+<h3>Guest List</h3>
+<%= @episode.guests.each do |g|%>
+<%= link_to g.name, guest_path(g)%>
+<%end%>
+
+<h3>Average Rating For Appearance</h3>
+<%= @episode.appearances.average(:rating).to_i%>
+
+
