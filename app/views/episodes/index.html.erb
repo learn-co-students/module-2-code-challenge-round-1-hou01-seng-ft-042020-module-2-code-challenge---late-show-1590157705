@@ -3,5 +3,7 @@
 <ul>
   <% @episodes.each do |episode| %>
     <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
+    # stored inside each appearance is an episode and guest id. Need to locate episodes that match the episode being passed through iteration and display the guests for that episode.
+    <label>Guests:</label> <a href = ""><%= Appearance.find(episode) %></a>
   <% end %>
 </ul>

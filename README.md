@@ -24,7 +24,7 @@ The application keeps track of the guests that have appeared on the show.
 There are three models in the domain: Guest, Episode, and Appearance.
 
 Guests and Episodes have a many to many relationship through Appearances. A single Appearance belongs to one Guest and one Episode.
-
+ 
 ## What You Already Have
 
 The starter code includes migrations, models, and seed data for Guests and Episodes. There are also routes, controller actions, and views to support listing the guests and episodes.
@@ -91,8 +91,8 @@ After submitting the form, the user should be redirected to the selected episode
 
 On the episode show page, a user should see:
 
-- Episode date
-- A list of the guests who were on that episode
+- Episode date #already completed for us
+- A list of the guests who were on that episode 
 - Each guest's name should link to the Guest Show page
 
 ### 4. Guest Show Page Episode links
